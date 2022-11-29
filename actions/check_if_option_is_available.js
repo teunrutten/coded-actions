@@ -10,7 +10,7 @@ exports.main = async (event, callback) => {
   // Make sure to include the property you want to check for
   const valueToCheck = event.inputFields['property'];
 
-  // REPLACE WITH THE DESIRED PROPERTY YOU WANT TO CHECK FOR AND THE OBJECT TYPE
+  // REPLACE WITH THE DESIRED SELECT PROPERTY YOU WANT TO CHECK FOR AND THE OBJECT TYPE
   const propertyName = undefined;
   const object = undefined;
   
