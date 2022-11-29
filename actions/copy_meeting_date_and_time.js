@@ -16,7 +16,7 @@ exports.main = async (event, callback) => {
       'Authorization': `Bearer ${process.env.secretName}`
     }
   }).then((response) => {
-	if (response.data.results.length > 0) {
+	  if (response.data.results.length > 0) {
       console.log(`Found ${response.data.results.length} meetings for contact ${contactID}`)
       return response.data.results.map((result) => { 
       	return {
