@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 exports.main = async (event, callback) => {
+  // Set this to the quote ID
   const quoteID = event.inputFields['quoteID'];
 
   // SET THIS TO THE TEMPLATE ID OF YOUR CUSTOM QUOTE TEMPLATE
