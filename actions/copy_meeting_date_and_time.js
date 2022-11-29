@@ -8,7 +8,7 @@ exports.main = async (event, callback) => {
   const contactID = event.inputFields['hs_object_id'];
 
   // We will first retrieve the last 10 meetings of the contact and return the ID of each meeting
-  const associations = await axios({
+  const associatedMeetings = await axios({
     method: 'get',
     url: `https://api.hubapi.com/crm/v3/objects/contacts/${contactID}/associations/meetings/?limit=10`,
     headers: {
@@ -30,13 +30,13 @@ exports.main = async (event, callback) => {
     console.log(error)
   })
   
-  if (associations) {
+  if (associatedMeetings) {
     const data = {
      properties: [
         "hs_timestamp",
         "hs_meeting_start_time"
       ],
-      inputs: associations
+      inputs: associatedMeetings
     }
     
     // We will get the above properties for the last 10 meetings
